@@ -130,14 +130,4 @@ namespace Deliverable_Two
     }
 }
 
-/*
-The program will ask the user for a party size, ask for each party member’s drink order, keep track of how many times each drink was ordered, and at the end, present a bill with the accurate total price.
 
-This is an all-you-can-eat buffet, so the price for each person is the same. (Set the buffet price to $9.99 per person.) The guests only pay extra for drinks... and this buffet only has two drinks! You can choose the two drinks and their prices. (For example, water is free, and coffee is $2.00).
-
-You'll want to set up some variables to use throughout your program, such as number variables that keep track of how many of each drink is ordered, and how much the drinks cost. (Hint: what number data type could be used to represent money? It's not an integer...) Limit the party size to six people. If the user inputs a party size that is too large, simply provide them with a polite rejection message and end the program.
-
-Otherwise, print out the drink options for the user. Now, set up a loop that asks each person for which drink they'd like. Keep track of how many of each drink is ordered because you'll need this number to calculate the bill.
-
-After taking the orders, calculate the total and print out that value to the user.
-*/
