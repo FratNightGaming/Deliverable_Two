@@ -18,6 +18,11 @@ namespace Deliverable_Two
 
         static void Main(string[] args)
         {
+            Introduction();        
+        }
+
+        public static void Introduction()
+        {
             Console.WriteLine("Hi. Welcome to our buffet. All you can eat for $9.99! We only charge extra for coffee. How many people in your group? Please, parties of 6 or fewer.\n");
 
             partySize = int.Parse(Console.ReadLine());
@@ -29,7 +34,7 @@ namespace Deliverable_Two
 
             else
             {
-                Console.WriteLine("I'm sorry. We can not serve more than {0}.", maxPartyAmount.ToString());//end of program
+                Console.WriteLine("I'm sorry. We can not serve more than {0}.", maxPartyAmount.ToString());//end of program//ToString is not necessary but I still left it in
             }
         }
 
@@ -39,7 +44,6 @@ namespace Deliverable_Two
             Console.WriteLine("A table for {0}. Please follow me and take a seat.\n", partySize);
 
             TakeOrder();
-            
         }
 
         public static void TakeOrder()
@@ -83,7 +87,6 @@ namespace Deliverable_Two
 
                 default:
                     Console.Write("Okay. So that's {0} coffees ", coffees.Count);
-
                     break;
             }
 
@@ -103,12 +106,12 @@ namespace Deliverable_Two
 
         public static void Bill()
         {
-            Console.WriteLine("Here is your bill.");
-            Console.WriteLine($"{partySize} buffets = ${partySize * buffetCostPer}");
             float buffetTotal = partySize * buffetCostPer;
+            Console.WriteLine("Here is your bill.");
+            Console.WriteLine($"{partySize} buffets = ${buffetTotal}");
 
-            Console.WriteLine($"{coffees.Count} coffees = ${coffees.Count * coffeeCostPer}");
             float CoffeeTotal = coffees.Count * coffeeCostPer;
+            Console.WriteLine($"{coffees.Count} coffees = ${CoffeeTotal}");
 
             switch (waters.Count)
             {
@@ -123,7 +126,7 @@ namespace Deliverable_Two
 
             total = buffetTotal + CoffeeTotal;
 
-            Console.WriteLine($"Your total is {total}\n");
+            Console.WriteLine($"Your total is ${total}\n");
 
             Console.WriteLine("Have a great rest of your day!");
         }
